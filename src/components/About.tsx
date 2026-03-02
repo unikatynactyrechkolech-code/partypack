@@ -33,15 +33,16 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
             <motion.span
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.3 }}
               className="inline-block px-4 py-2 rounded-full bg-indigo-50 text-indigo-600 text-sm font-medium mb-6"
             >
               O nás
@@ -66,18 +67,18 @@ export default function About() {
 
           {/* Right - Features */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ delay: index * 0.15 }}
                 className="p-6 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition-all duration-300"
               >

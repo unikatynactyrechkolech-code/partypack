@@ -62,15 +62,16 @@ export default function ContactForm() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
             <motion.span
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.3 }}
               className="inline-block px-4 py-2 rounded-full bg-indigo-50 text-indigo-600 text-sm font-medium mb-6"
             >
               Kontakt
@@ -110,10 +111,10 @@ export default function ContactForm() {
 
           {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
             <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm">
               <div className="space-y-5">
